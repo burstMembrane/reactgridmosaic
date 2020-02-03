@@ -1,0 +1,27 @@
+.image-grid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+
+  grid-auto-rows: 10px;
+  grid-gap: 0px 5px 0px 0px;
+}
+
+.image-grid img {
+  width: calc(100% - 10px);
+  grid-row-end: span 2;
+}
+
+@media only screen and (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+@media only screen and (max-width: 900px) {
+   {
+    .image-grid {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+  }
+}
