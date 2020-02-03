@@ -13,11 +13,22 @@ class ImageCard extends React.Component {
 
 		let spans = Math.ceil(height / 10) + 1;
 
-		console.log(spans);
 		this.setState({spans});
+		// show after load
+
+		this.imageRef.current.classList.add('show');
 		// round image hight to fit available grid space
 	};
+
+	hideImage() {
+		this.imageRef.current.classList.add('hide');
+	}
+	showImage() {
+		this.imageRef.current.classList.remove('hide');
+		this.imageRef.current.classList.add('show');
+	}
 	componentDidMount() {
+		this.hideImage();
 		this.imageRef.current.addEventListener('load', this.setSpans);
 	}
 	render() {

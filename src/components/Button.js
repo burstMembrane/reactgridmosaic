@@ -16,7 +16,7 @@ class Button extends React.Component {
 	render() {
 		return (
 			<button onClick={(e) => this.onBtnClick(e)} className={this.state.btnClass}>
-				<i className={this.state.icon} />{' '}
+				<i className={this.state.icon} />
 			</button>
 		);
 	}

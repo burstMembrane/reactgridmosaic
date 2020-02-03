@@ -12,7 +12,6 @@ class App extends React.Component {
 
 	async onSearchSubmit(term) {
 		const response = await unsplash.get(`/search/photos`, {params: {query: term}});
-
 		this.setState({images: response.data.results});
 	}
 
@@ -22,7 +21,7 @@ class App extends React.Component {
 				<SearchBar
 					onSubmit={(term) => this.onSearchSubmit(term)}
 					placeholder="Type search term here"
-					label="Image Search"
+					label="Image Search Mosaic w/ React"
 				>
 					<Button icon="search" showLoading={false} />
 				</SearchBar>

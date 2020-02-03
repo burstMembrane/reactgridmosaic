@@ -12,6 +12,14 @@
   grid-row-end: span 2;
 }
 
+.hide {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
 @media only screen and (max-width: 600px) {
   .image-grid {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
