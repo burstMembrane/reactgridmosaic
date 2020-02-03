@@ -22,7 +22,10 @@ class SearchBar extends React.Component {
 			<div className="ui segment">
 				<form onSubmit={this.onFormSubmit} className="ui form" action="">
 					<div className="field">
-						<label htmlFor="search"> {this.props.label} </label>
+						<label className="ui huge label " htmlFor="search">
+							{' '}
+							{this.props.label}{' '}
+						</label>
 
 						<div className="ui action input">
 							<input
