@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 
-const accessKey = 'e7b5cfe3e0952e934f895668e6eddfd91c38a3a45ec3f64ba55d40d3b297f6b8';
+// have to call environment variable with "REACT_APP_{variable}"
+const accessKey = process.env.REACT_APP_API_KEY;
 
 const unsplash = axios.create({
     baseURL: 'https://api.unsplash.com/',
