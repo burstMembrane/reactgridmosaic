@@ -22,18 +22,15 @@ class SearchBar extends React.Component {
 			<div className="ui segment">
 				<form onSubmit={this.onFormSubmit} className="ui form" action="">
 					<div className="field">
-						<label className="ui huge label " htmlFor="search">
-							{' '}
-							{this.props.label}{' '}
-						</label>
+						<h1 className="ui header " htmlFor="search">
+							{this.props.label}
+						</h1>
 
-						<div className="ui action input">
+						<div className="ui action input focus ">
 							<input
 								type="text"
 								name="search"
 								value={this.state.term}
-								// update state with input value - rerenders component
-								//  we always know the value of input
 								onClick={(e) => this.setState({term: ''})}
 								onChange={(e) => this.setState({term: e.target.value})}
 							/>
